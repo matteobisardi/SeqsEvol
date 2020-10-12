@@ -1,3 +1,5 @@
+export read_par_BM
+
 """
 	read_par_BM(path::AbstractString, q, N)
 
