@@ -1,10 +1,10 @@
 """
 	count_muts(seq1, seq2)
 
-  Compute the Hamming distance between sequences 'seq1' and 'seq2'.
-
+  	Compute the Hamming distance between sequences 'seq1' and 'seq2'.
+	
+	
 """
-
 function count_muts(seq1, seq2)
 	ll = length(seq1)
 	ll != length(seq2) && error("The two vectors do not have the same length.")
@@ -16,6 +16,7 @@ function count_muts(seq1, seq2)
     end
     return n_muts
 end
+
 
 
 """
