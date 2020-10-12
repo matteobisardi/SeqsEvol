@@ -1,6 +1,18 @@
+"""
+	read_par_BM(path::AbstractString, q, N)
 
-# takes the parameters of francesco and changes in a way that we get a tensor (for J)
-# and that the J[a, b, i, j] is such that  1 == "A", ... "21" == "-"
+	Reads the parameters of a Potts model in format
+	
+	J i j a b
+	...
+	h i a 
+
+	and returns them in tensor format.
+	J[a, b, i, j] is such that  1 == "A", ... "21" == "-",
+	and the same for  h[a, i].
+
+"""
+
 function read_par_BM(path::AbstractString, q, N)
 	data = readdlm(path,' ', use_mmap = true)[:, 2:6]
 	J = Array{Float64}(undef, q, q, N, N)
