@@ -2,8 +2,8 @@ module SeqsEvol
 
 using FastaIO
 
-include("seqsevol.jl")
-include("seqs.jl")
+include("evol.jl")
+include("seqstools.jl")
 
 
 
