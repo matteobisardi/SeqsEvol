@@ -1,3 +1,5 @@
+export num2letter, vec2string
+
 """
 	num2letter(i)
 
