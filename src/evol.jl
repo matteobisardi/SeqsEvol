@@ -76,7 +76,8 @@ end
 """
 
 
-function evol_msa_fix_steps(output_file, seed_seq, MC_steps, n_seq, h, J, T = 1; n_MSA = 1, prot_name = "TEM-1")
+function evol_msa_fix_steps(output_file, seed_seq, MC_steps, n_seq; T = 1, n_MSA = 1, prot_name = "TEM-1")
+	h, J = extract_par()
 	N = length(seed_seq)
 	pop = collect(Int16, 1:21)
 	prob = Vector{Float32}(undef, 21)
@@ -86,7 +87,7 @@ function evol_msa_fix_steps(output_file, seed_seq, MC_steps, n_seq, h, J, T = 1;
 		FastaWriter(file_name, "w") do file
 			@inbounds for j in 1:n_seq
 				writeentry(file, "$j |evolved from $prot_name with Gibbs Sampling | $MC_steps MC steps, T = $T",
-				vec2string(evol_seq_fix_steps(seed_seq, MC_steps, h, J, N, pop, prob, rr, T)))
+				vec2string(evol_seq_fix_steps(seed_seq, MC_steps, h, J, N, pop, prob, rr, T = 1)))
 			end
 		end
 	end
