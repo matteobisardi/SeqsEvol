@@ -2,7 +2,9 @@
 	count_muts(seq1, seq2)
 
   	Compute the Hamming distance between sequences 'seq1' and 'seq2'.
-	
+	"seq1" and "seq2" need only to be vectors.
+
+	The function returns an integer number: the Hamming distance. 
 	
 """
 function count_muts(seq1, seq2)
