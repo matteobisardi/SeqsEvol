@@ -1,4 +1,7 @@
-export evol_msa_fix_steps
+export evol_msa_fix_steps, stupid_test
+
+stupid_test() = 2
+
 
 """
 	cond_proba(k, mutated_seq, h, J, prob, T = 1)
