@@ -1,4 +1,4 @@
-export compute_energy_single_sequence, read_par_BM
+export compute_energy_single_sequence
 
 """
 
